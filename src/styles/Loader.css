@@ -1,0 +1,29 @@
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* Высота для центрирования вертикально */
+}
+
+.spinner {
+    border: 8px solid #f3f3f3; /* Светлый фон */
+    border-top: 8px solid var(--primary-color); /* Цвет спиннера */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 480px) {
+    .spinner {
+        width: 40px;
+        height: 40px;
+        border-width: 6px;
+    }
+}

@@ -1,0 +1,107 @@
+/* CSS Reset для устранения стандартных стилей браузеров */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Определение CSS-переменных */
+:root {
+    --primary-color: #4A90E2;
+    --secondary-color: #50E3C2;
+    --background-color: #F5F7FA;
+    --text-color: #333333;
+    --light-text-color: #777777;
+    --error-color: #D0021B;
+    --success-color: #7ED321;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --transition-duration: 0.3s;
+}
+
+/* Общие стили для body */
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Контейнер для центрирования контента */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Установка ссылок без подчеркивания и наследование цвета */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Заголовки */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+/* Абзацы */
+p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: var(--light-text-color);
+}
+
+/* Ссылки */
+a {
+    color: var(--primary-color);
+    transition: color var(--transition-duration) ease;
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+/* Универсальная кнопка */
+.button {
+    padding: 12px 20px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color var(--transition-duration) ease, transform var(--transition-duration) ease;
+    display: inline-block;
+}
+
+.button:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.button:active {
+    transform: translateY(0);
+}
+
+.button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
